@@ -10,7 +10,7 @@ public class PropertiesReader {
 	static {
 
 		try {
-			String filePath = "src/test/resources/dataFolder/config.properties";
+			String filePath = Constants.CONFIGURATION_FILEPATH;
 
 			FileInputStream input = new FileInputStream(filePath);
 

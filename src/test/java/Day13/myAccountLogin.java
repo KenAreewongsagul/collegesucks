@@ -3,6 +3,7 @@ package Day13;
 import org.testng.annotations.Test;
 
 import Pages.commonPage;
+import Pages.myAccountPage;
 
 import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
@@ -19,8 +20,7 @@ import utilities.commonMethods;
 
 @Listeners(ListernersTestNG.class)
 public class myAccountLogin extends commonMethods{
-	
-	
+
 
 	@BeforeMethod
 	public void beforeTest() {

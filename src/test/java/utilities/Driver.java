@@ -1,6 +1,9 @@
 package utilities;
 
 import org.testng.annotations.AfterMethod;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,6 +27,8 @@ public class Driver {
 				driver.get(PropertiesReader.getProperty("automationTestCaseURL"));
 				// maximize
 				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);
+
 				PageInitializer.initialize();
 
 				break;
@@ -33,6 +38,7 @@ public class Driver {
 				driver.get(PropertiesReader.getProperty("automationTestCaseURL"));
 				// maximize
 				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);
 				PageInitializer.initialize();
 				break;
 			case "safari":
@@ -41,6 +47,8 @@ public class Driver {
 				driver.get(PropertiesReader.getProperty("automationTestCaseURL"));
 				// maximize
 				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);
+
 				PageInitializer.initialize();
 				break;
 			case "headless":
